@@ -27,5 +27,22 @@ public class Main
       } 
     }
     System.out.println(newString);
+
+    System.out.println("Enter 2 strings");
+    String s1 = sc.nextLine();
+    String s2 = sc.nextLine();
+    String output = "";
+
+    if (s1.length() == s2.length()) {
+      for (int i = s2.length() -1; i >= 0; i--) {
+        String L1 = s1.substring(i, i+1);
+        String L2 = s2.substring(i, i+1);
+        output = output + L2 + L1;
+      } 
+    } else {
+      output = "error";
+    }
+
+    System.out.println(output);
   }
 }
